@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Persons List</title>
+</head>
+<body>
+<h1> Persons List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>person ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>aye</th>
+        <th>address</th>
+        <th>phone</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="person : ${persons}">
+        <td th:text="${person.personID}"></td>
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.surname}"></td>
+        <td th:text="${person.aye}"></td>
+        <td th:text="${person.phone}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+
+</html>
